@@ -1,0 +1,279 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+    background-color: peachpuff;
+    position: relative;
+}
+
+nav{
+    background-color: blueviolet;
+    color: rgb(226, 207, 245);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+#span{
+    color: rgb(213, 203, 222);
+    font-size: 2.5rem;
+    padding-left: 40px;
+
+}
+
+#name{
+/* font-family: "Pacifico", cursive; */
+font-family: "Savate", sans-serif;
+    /* font-family: "Dancing Script", cursive; */
+}
+
+.list-items{
+    list-style: none;
+    display: inline;
+    margin: 0px 20px;
+}
+
+.links{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(251, 250, 250);
+}
+
+.links:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+#home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 200px; 
+    padding-left: 160px;
+}
+
+.home-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(85, 46, 135);
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    padding: 10px;
+
+}
+
+.image{
+    width: 100%;
+    border-radius: 150px;
+}
+.home-content{
+    /* padding-left: 100px;   */
+    padding-right: 650px;  
+}
+
+#hello{
+    font-size: 2rem;
+    color: #557da9;
+}
+
+#username{
+    font-size: 2rem;
+    color: #4b0082;
+}
+
+#description{
+    color: rgb(85, 46, 135);
+}
+
+#download{
+    text-decoration: none;
+    background-color: rgb(85, 46, 135);
+    color: rgb(253, 253, 253);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+#about{
+    margin: 10% 8% 0px 8%;
+}
+
+.SectionHead{
+    text-align: center;
+}
+
+.mainHead{
+    color: rgb(85, 46, 135);
+    font-size: 30px;
+}
+
+.SubHead{
+    font-size: 20px;
+    color: black;
+}
+
+.aboutBody{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.image1{
+    width: 80%;
+}
+
+.para{
+    margin-top: 40px;
+    font-size: 1.2rem;
+        padding-left: 50px;
+
+}
+
+.Information{
+    margin-top: 1.3rem;
+    padding-left: 50px;
+    font-size: 1.2rem;
+
+}
+
+.infoBox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.infoBox>span{
+    margin-left: 1rem;
+}
+
+#skills{
+    margin: 10% 8% 0px 8%;
+}
+
+.skillContent{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    width: 350px;
+    margin: 30px auto;
+}
+
+.box{
+    border: 4px solid;
+    border-color: #4b0082;
+    border-radius: 15px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.box .percent{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.box .label{
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b0082;
+}
+
+ #contact{
+       margin: 10% 8% 0px 8%;
+}
+
+.iconCollections{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    width: 350px;
+    margin: 40px auto;
+}
+
+.iconCollections a{
+     text-decoration: none;
+}
+
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #557da9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}    
+
+.brands{
+    color: black;
+    font-size: 2rem;
+}
+
+.icon:hover{
+    background-image: linear-gradient(to bottom right,rgb(46, 109, 161),rgb(44, 192, 143));
+}
+
+.icon:hover .brands{
+    color: white;
+    animation: rotation 3s;
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+
+} 
+
+
+footer{
+    margin-top: 8%;
+    margin-bottom: 20px;
+}
+
+#copyright{
+    text-align: center;
+    font-weight: 600;
+}
+
+.home{
+    float: right;
+    margin: -55px 20px 30px 0px;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+
+
