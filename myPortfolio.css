@@ -12,7 +12,7 @@
 
 nav{
     background-color: blueviolet;
-    color: rgb(226, 207, 245);
+    color: rgb(207, 194, 219);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +20,7 @@ nav{
     position: fixed;
     width: 100%;
     font-size: 1.1rem;
+    z-index: 10;
 }
 
 #span{
@@ -54,10 +55,11 @@ font-family: "Savate", sans-serif;
 
 #home{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 200px; 
-    padding-left: 160px;
+    padding: 200px 100px 0 200px;
+    flex-wrap: wrap;
+    gap: 30px; /* space between image and text */
 }
 
 .home-img{
@@ -65,8 +67,10 @@ font-family: "Savate", sans-serif;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(85, 46, 135);
-    width: 300px;
-    height: 300px;
+    width: 50vw;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
     border-radius: 150px;
     padding: 10px;
 
@@ -77,22 +81,31 @@ font-family: "Savate", sans-serif;
     border-radius: 150px;
 }
 .home-content{
-    /* padding-left: 100px;   */
-    padding-right: 650px;  
+    max-width: 500px;
+    text-align: left;
+    padding-left: 50px;
+    font-family: "Roboto Slab", serif;
 }
 
 #hello{
     font-size: 2rem;
-    color: #557da9;
+    color: black ;
 }
 
 #username{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+#name {
     color: #4b0082;
+    font-size: 2.4rem;
+    font-family: "Julee", cursive;
 }
 
 #description{
-    color: rgb(85, 46, 135);
+    font-weight: bold;
+    color: rgb(9, 9, 9);
 }
 
 #download{
@@ -103,6 +116,10 @@ font-family: "Savate", sans-serif;
     padding: 10px;
     margin-top: 30px;
     display: inline-block;
+}
+
+#download:hover {
+  background-color: #6937b0;
 }
 
 #about{
@@ -124,10 +141,11 @@ font-family: "Savate", sans-serif;
 }
 
 .aboutBody{
-    margin-top: 50px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .image1{
@@ -138,6 +156,7 @@ font-family: "Savate", sans-serif;
     margin-top: 40px;
     font-size: 1.2rem;
         padding-left: 50px;
+        line-height: 2rem;
 
 }
 
@@ -145,6 +164,7 @@ font-family: "Savate", sans-serif;
     margin-top: 1.3rem;
     padding-left: 50px;
     font-size: 1.2rem;
+    line-height: 2rem;
 
 }
 
@@ -165,13 +185,15 @@ font-family: "Savate", sans-serif;
 .skillContent{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
-    width: 350px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    width: 50%;
     margin: 30px auto;
 }
 
 .box{
+    width: 180px;
+    height: 130px;
     border: 4px solid;
     border-color: #4b0082;
     border-radius: 15px;
@@ -191,16 +213,30 @@ font-family: "Savate", sans-serif;
 }
 
  #contact{
-       margin: 10% 8% 0px 8%;
+    margin: 10% 8% 0px 8%;
 }
 
 .iconCollections{
     margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
     width: 350px;
     margin: 40px auto;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactItem span {
+ 
+  color: black;
+  font-size: 1.1rem;
+  font-family: "Roboto Slab", serif;
 }
 
 .iconCollections a{
@@ -255,6 +291,75 @@ font-family: "Savate", sans-serif;
 
 } 
 
+.contactMessage {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: black;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+/* Language Section */
+#languages {
+  margin: 10% 8% 0px 8%;
+}
+
+.languageContent {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.langBox {
+  background-color: #4b0082;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.5s; 
+  gap: 20px;
+}
+
+.langBox:hover {
+  background-color: #6937b0;
+}
+
+/* Education Section */
+#education {
+  margin: 10% 8% 0px 8%;
+}
+
+.eduContent {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+} 
+
+.eduBox {
+  background-color: #e6d8f6;
+  border-left: 5px solid #4b0082;
+  padding: 20px;
+  border-radius: 10px;
+  row-gap: 20px;
+  font-family: "Roboto Slab", serif;
+}
+
+.eduBox h3 {
+  margin-bottom: 10px;
+  color: #4b0082;
+}
+
+.eduBox p {
+  color: #333;
+}
+
+
 
 footer{
     margin-top: 8%;
@@ -276,4 +381,135 @@ footer a{
 }
 
 
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #home {
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 40px 0 40px;
+  }
+
+  .home-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .aboutBody {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .Information, .para {
+    padding-left: 0;
+  }
+
+  .skillContent {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .iconCollections {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+
+  nav {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  #span {
+    font-size: 2rem;
+    padding-left: 10px;
+  }
+
+    .home-img{
+        width: 200px;
+        height: 200px;
+    }
+
+
+  .image1,
+  .home-img img {
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+  }
+
+  .langBox {
+    width: 90%;
+    text-align: center;
+  }
+
+  .eduContent {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home {
+    float: none;
+    margin: 20px auto 0;
+  }
+}
+
+/* Small Phones: screens <= 480px */
+@media (max-width: 480px) {
+  #home {
+    padding: 130px 20px 0 20px;
+  }
+
+  #hello {
+    font-size: 1.5rem;
+  }
+
+  #username {
+    font-size: 1.2rem;
+  }
+
+  #name {
+    font-size: 1.8rem;
+  }
+
+  .mainHead {
+    font-size: 1.6rem;
+  }
+
+  .SubHead {
+    font-size: 1rem;
+  }
+
+  .home-img{
+        width: 200px;
+        height: 200px;
+    }
+
+  .box .percent,
+  .box .label {
+    font-size: 1rem;
+  }
+
+  .contactMessage {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
 
